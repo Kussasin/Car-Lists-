@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Storage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container__filter">
+    <h1 class="table__name"> Lista samohodów </h1>
+    <input class="" type="text" id="myInput" placeholder="Filtruj po modelu pojazdu" aria-label="Search">
+  </div>
+  <div class="container__input">
+    <div class="container__item ">
+      <div class="error__message">
+        <input class="input__data " type="text" id="brand" required placeholder="Marka pojazdu:"
+          aria-label="Brand_vehicle">
+        <p class="error__input">Niepoprawna marka</p>
+      </div>
+      <div class="error__message">
+        <input class="input__data" type="text" id="model" required placeholder="Model pojazdu:"
+          aria-label="model_vehicle">
+        <p class="error__input">Niepoprawna model</p>
+        <p class="duplicate__error">Dany model już istnieje</p>
+      </div>
+      <div class="error__message">
+        <input class="input__data" type="text" id="year" required placeholder="Rok produkcji:"
+          aria-label="year_of_issue">
+        <p class="error__input">Niepoprawny rok</p>
+      </div>
+      <div class="error__message">
+        <button type="button" class="buttn__save record">Zapisz produkt</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edytuj</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input class="form-control" type="text" id="modal__brand" required placeholder="Marka pojazdu:"
+            aria-label="Brand_vehicle">
+          <p class="modal__error">Proszę wpisać poprawną "Markę pojazdu"</p>
+          <input class="form-control" type="text" id="modal__model" readonly required placeholder="Model pojazdu:"
+            aria-label="model_vehicle">
+          <input class="form-control" type="text" id="modal__year" required placeholder="Rok produkcji:"
+            aria-label="year_of_issue">
+          <p class="modal__error">Proszę wpisać poprawny "Rok produkcji"</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn col-4 buttn__save__modal action edit__item">Edytuj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-striped" id="sortable">
+    <thead>
+      <tr class="table__row">
+        <th scope="col" class="first__col">Marka pojazdu <i class="fas fa-filter"></i></th>
+        <th scope="col">Model pojazdu <i class="fas fa-filter"></i></th>
+        <th scope="col" data-type="number">Rok produkcji <i class="fas fa-filter"></i></th>
+        <th scope="col" class="last__col">Działanie</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+
+    </tbody>
+  </table>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/85cac92644.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, rgb(255, 121, 95) 0%, rgb(206, 23, 104) 100%);
+  color: #fff;
+  padding: 0.6rem 2rem;
+}
+
+.container__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table__name {
+  font-size: 28px;
+}
+
+.container__input {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: 1rem 0 3rem;
+  padding: 0 2rem 1rem;
+  box-shadow: 0px 2px 4px rgb(230, 230, 230);
+}
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  border: 0.3px solid rgb(209, 209, 209);
+  width: 30%;
+  padding: 3px;
+  outline: none;
+}
+
+.input__data {
+  width: 100%;
+  margin: 0 12px;
+  padding: 10px;
+  border: 0.3px solid rgb(209, 209, 209);
+}
+
+.input__data:focus,
+#myInput:focus {
+  border: 0.3px solid rgb(85, 85, 85);
+  outline: none;
+}
+
+.input__data:first-child {
+  margin: 0 12px 0 0;
+}
+
+.error__message {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttn {
+  background-color: #E42869;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.buttn:hover,
+.buttn__save:hover,
+.buttn__save__modal {
+  color: #E42869;
+  background-color: #FFF;
+  border: 1px solid #E42869;
+}
+
+.buttn:focus,
+.buttn__save:focus,
+.buttn__save__modal {
+  color: #E42869;
+  background-color: #FFF;
+  outline: none;
+  box-shadow: none;
+}
+
+.buttn__save,
+.buttn__save__modal {
+  border-radius: 0.5rem;
+  padding: 10px;
+  background-color: #E42869;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.error__input,
+.modal__error,
+.duplicate__error {
+  color: red;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  display: none;
+}
+
+.fa-filter {
+  cursor: pointer;
+}
+
+.first__col {
+  padding-left: 33px !important;
+}
+
+.last__col {
+  width: 10%;
+}
+
+.form-control {
+  margin: 10px 0;
+}
+
+.form-control:focus,
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+@media screen and (max-width: 1026px) {
+  .buttn {
+    font-size: 0.8rem;
+    height: 38px;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  th {
+    font-size: 14px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+
+  .buttn {
+    font-size: 0.6rem;
+    height: 33px;
+  }
+}
+
+@media screen and (max-width: 908px) {
+  .buttn__save {
+    width: 100%;
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .input__data {
+    padding: 5px;
+  }
+
+  #myInput {
+    width: 35%;
+  }
+
+  .buttn {
+    font-size: 0.5rem;
+    height: 32px;
+  }
+
+  .fa,
+  .fab,
+  .fad,
+  .fal,
+  .far,
+  .fas {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+
+  .input__data {
+    font-size: 12px;
+  }
+
+  #myInput {
+    width: 40%;
+    font-size: 14px;
+  }
+
+  .buttn__save {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .table__name {
+    font-size: 24px;
+  }
+
+.h5, h5 {
+    font-size: 1rem;
+}
+}
+
+@media screen and (max-width: 666px) {
+  .input__data {
+    font-size: 10px;
+  }
+
+  th {
+    font-size: 10px;
+  }
+
+  .form-control {
+    font-size: 0.8rem;
+  }
+
+  .buttn__save__modal{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .table__name {
+    font-size: 18px;
+  }
+
+  .container__item {
+    flex-direction: column;
+  }
+
+
+  .container__input {
+    flex-direction: column;
+  }
+
+  #myInput {
+    width: 40%;
+    font-size: 12px;
+  }
+  .fa,
+  .fab,
+  .fad,
+  .fal,
+  .far,
+  .fas {
+    font-size: 8px;
+  }
+}
